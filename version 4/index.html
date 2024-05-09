@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Your CSS styles */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Pet Care Management System</h1>
+        <p>Manage your pets' health, appointments, and more with ease!</p>
+        <a href="D:\pcms\version 4\loginj.html">Get Started</a><br>
+        <a href="D:\pcms\version 4\partnersj.html">partner</a><br>
+        <a href="D:\pcms\version 4\benefitsj.html">benefits</a><br>
+        <a href="D:\pcms\version 4\pricingj.html">pricing</a><br>
+        <a href="D:\pcms\version 4\signupj.html">signup</a><br>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript validation integration
+        // You can add your validation code here for the signup form
+        // For example, you can use event listeners to validate input fields before submitting the form
+        // Here's a simple example:
+
+        // Add event listener to the signup form
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            // Get form inputs
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm_password").value;
+            var petName = document.getElementById("pet_name").value;
+            var petType = document.getElementById("pet_type").value;
+            var petBirthday = document.getElementById("pet_birthday").value;
+
+            // Perform validation
+            if (!username || !email || !password || !confirmPassword || !petName || !petType || !petBirthday) {
+                event.preventDefault(); // Prevent form submission if fields are empty
+                alert("Please fill in all fields.");
+            } else if (password !== confirmPassword) {
+                event.preventDefault(); // Prevent form submission if passwords don't match
+                alert("Passwords do not match.");
+            }
+        });
+    </script>
+</body>
+</html>
